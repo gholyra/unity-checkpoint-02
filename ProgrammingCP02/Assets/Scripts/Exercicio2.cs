@@ -33,18 +33,30 @@ public class Exercicio2 : MonoBehaviour
                 if (c == letter)
                 {
                     matchedWords++;
+                    print(word.IndexOf(c));
                 }
             }
         }
+        
         finalWords = new string[matchedWords];
+        print(finalWords.Length);
+
+        foreach (string word in words)
+        {
+            foreach (char c in word)
+            {
+                if (c == letter)
+                {
+                    for(int i = 0; i < finalWords.Length; i++)
+                    {
+                        finalWords[i] = word;
+                    }
+                }
+            }
+        }
         for(int i = 0; i < finalWords.Length; i++)
         {
-            foreach (string word in words)
-            {
-
-                finalWords[i] = word;
- 
-            }
+            print(finalWords[i]);
         }
         return finalWords;
     }
