@@ -21,7 +21,7 @@ public class Exercicio2 : MonoBehaviour
         
     }
 
-    private string[] VerifyString(string[] words, char letter)
+    private int VerifyString(string[] words, char letter)
     {
         int matchedWords = 0;
         string[] finalWords;
@@ -33,7 +33,6 @@ public class Exercicio2 : MonoBehaviour
                 if (c == letter)
                 {
                     matchedWords++;
-                    print(word.IndexOf(c));
                 }
             }
         }
@@ -58,7 +57,7 @@ public class Exercicio2 : MonoBehaviour
         {
             print(finalWords[i]);
         }
-        return finalWords;
+        return finalWords.Length;
     }
 
 }
